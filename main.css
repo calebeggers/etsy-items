@@ -1,0 +1,78 @@
+html {
+	background-color: #eee;
+}
+
+body {
+	color: #434343;
+	font-family: 'Roboto Slab', serif;
+	letter-spacing: 0px;
+}
+
+.title {
+	font-weight: 400;
+	padding-top: 22px;
+	padding-left: 40px;
+	padding-bottom: 22px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color: #fff;
+}
+
+.hero-container img {
+	width: 100%;
+}
+
+.answer {
+    position: relative;
+    z-index: 1;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.answer:before {
+        border-top: 2px solid #dfdfdf;
+        content:"";
+        margin: 0 auto;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 94%;
+        z-index: -1;
+}
+
+.answer span {
+	background-color: #eee;
+	padding-right: 10px;
+	padding-left: 10px;
+	font-size: 40px;
+}
+
+.answer-content {
+	margin-top: 35px;
+	margin-bottom: 50px;
+	position: relative;
+	padding-bottom: 95px;
+}
+
+.edit-content {
+	margin: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.footer {
+	position: relative;
+	background-color: #4b484f;
+	height: 175px;
+	text-align: center;
+}
+
+.copyright {
+	position: absolute;
+	color: #a3a1a7;
+	padding-top: 125px;
+	left: 40%;
+	right: 40%;
+}
