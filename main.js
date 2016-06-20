@@ -12,7 +12,7 @@ var itemPricesSum = itemPrices.reduce(function(a, b) {
 
 var itemPricesAvg = Math.round(((itemPricesSum / itemPrices.length)) * 100) / 100;
 
-document.getElementById("answer-1").textContent = "The average price is: $" + itemPricesAvg;
+document.getElementById("answer-1").innerHTML = "<div>" + "The average price is: $" + itemPricesAvg + "</div>";
 
 //=====================================================================================================================================================
 //Problem Two: Price range
@@ -26,7 +26,7 @@ var priceRange = filtered.map(function(object) {
 	return object.title;
 })
 
-document.getElementById("answer-2").textContent = "Items that cost between $14 and $18 are: " + priceRange;
+document.getElementById("answer-2").innerHTML = "<div>" + "Items that cost between $14 and $18 are: " + priceRange + "</div>";
 
 //=====================================================================================================================================================
 //Problem Three: Item that costs fake money
@@ -44,7 +44,7 @@ var currencyCode = gbpItem.map(function(object) {
 	return object.price;
 })
 
-document.getElementById("answer-3").textContent = currencyCodeTitle + " costs £" + currencyCode;
+document.getElementById("answer-3").innerHTML = "<div>" + currencyCodeTitle + " costs £" + currencyCode + "</div>";
 
 //=====================================================================================================================================================
 //Problem Four: Items made of wood
@@ -58,7 +58,7 @@ var woodThings = woodItems.map(function(object) {
 	return object.title;
 })
 
-document.getElementById("answer-4").textContent = woodThings;
+document.getElementById("answer-4").innerHTML = "<div>" + woodThings + "</div>";
 
 //=====================================================================================================================================================
 //Problem Five: Things made of 8 other things
@@ -69,10 +69,10 @@ var moreThan = items.filter(function (item) {
 })
 
 var builtOf = moreThan.map(function(object) {
-	return object.title;
+	return object.title, object.materials.length, object.materials;
 })
 
-document.getElementById("answer-5").textContent = builtOf;
+document.getElementById("answer-5").innerHTML = "<div>" + builtOf + "</div>";
 
 //=====================================================================================================================================================
 //Problem Six: Who made it?
@@ -82,5 +82,5 @@ var uniqueItem = items.filter(function (item) {
 	return item.who_made == "i_did"
 })
 
-document.getElementById("answer-6").textContent = uniqueItem.length + " were made by their sellers";
+document.getElementById("answer-6").innerHTML = "<div>" + uniqueItem.length + " were made by their sellers" + "</div>";
 
