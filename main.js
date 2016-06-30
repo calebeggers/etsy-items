@@ -23,7 +23,7 @@ var filtered = items.filter(function(item) {
 })
 
 var priceRange = filtered.map(function(object) {
-	return object.title;
+	return `<li>${object.title}</li>`;
 })
 
 document.getElementById("answer-2").innerHTML = "<div>" + "Items that cost between $14 and $18 are: " + priceRange + "</div>";
@@ -55,7 +55,7 @@ var woodItems = items.filter(function (item) {
 })
 
 var woodThings = woodItems.map(function(object) {
-	return object.title;
+	return `<li>${object.title}</li>`;
 })
 
 document.getElementById("answer-4").innerHTML = "<div>" + woodThings + "</div>";
@@ -69,7 +69,9 @@ var moreThan = items.filter(function (item) {
 })
 
 var builtOf = moreThan.map(function(object) {
-	return object.title, object.materials.length, object.materials;
+	return `${object.title} contains ${object.materials.length} materials, which are ${object.materials.map(function (material) {
+		return `<li>${material}</li>`;
+	})}`;
 })
 
 document.getElementById("answer-5").innerHTML = "<div>" + builtOf + "</div>";
@@ -82,5 +84,5 @@ var uniqueItem = items.filter(function (item) {
 	return item.who_made == "i_did"
 })
 
-document.getElementById("answer-6").innerHTML = "<div>" + uniqueItem.length + " were made by their sellers" + "</div>";
+document.getElementById("answer-6").innerHTML = "<div>" + uniqueItem.length + " items were made by their sellers" + "</div>";
 
